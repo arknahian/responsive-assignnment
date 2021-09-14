@@ -1,0 +1,266 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    
+}
+:root{
+    --wYellow : #FABE4C;
+}
+nav.top-nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFBF0;
+    justify-content: center;
+    align-items: center;
+}
+nav.top-nav a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+.top-logo{
+    flex: 0.5;
+}
+.top-logo img {
+    width: 300px;
+}
+.half-width-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFBF0;
+    padding-bottom: 9%;
+}
+.half-width {
+    width: 31%;
+    margin: 66px 6% 0px 4%;
+}
+.half-width h1{
+    font-size: 4em;
+}
+.half-width img{
+    width: 100%;
+}
+.high-light-text {
+    color: var(--wYellow);
+}
+section{
+    width: 80%;
+    margin: 3% auto;
+}
+
+/* Card Css */
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px grey;
+    margin-top: 60px;
+}
+
+.card-thumbnail{
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    border-radius: 23px;
+    height: 368px;
+
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.card-thumb-frame{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.card-content{
+    padding: 20px;
+}
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price{
+    color: var(--wYellow);
+    font-size: 30px;
+}
+.price::before{
+    content: "$";
+}
+.buy-now-btn{
+    background-color: var(--wYellow);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.card-meta-description::after{
+    content: "Read More";
+    color: var(--wYellow);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* about us  */
+.info-card{
+    display: flex;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+.info-card{
+    box-shadow: 0px 0px 5px lightgrey;
+    border-radius: 10px;
+    width: 648px;
+}
+.about-us{
+    background-color: white;
+}
+.illustration img{
+    width: 100%;
+}
+section.about-us{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.info-thumb img{
+    width: 131px;
+    padding: 15px;
+}
+
+
+
+@media (max-width: 1024px) {
+    section.about-us{
+       flex-direction: column-reverse;
+    }
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 425px) {
+   
+    nav.top-nav{
+        display: none;
+    }
+    .card-thumbnail{
+        max-height: 250px;
+        overflow: hidden;
+    }
+    .half-width h1 {
+        font-size: 1.5em;
+    }
+    .half-width-container{
+        flex-direction: column;
+    }
+    .half-width{
+        width: 69%;
+        margin: 0;
+    }
+    .info-card{
+        width: 300px;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .contact-form{
+        margin-left: 0px;
+    }
+    footer img{
+        width: 78%;
+    }
+    section{
+        width: 100%;
+    }
+    .small-menu-container{
+        display: flex !important;
+    }
+    
+}
+
+
+
+footer {
+    display: flex;
+    background-color: #FFFBF0;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-form{
+    box-shadow:0px 1px 5px lightgrey;
+    padding: 50px;
+}
+footer img{
+    width: 40%;
+    height: 10%;
+}
+input{
+    padding: 10px;
+}
+.drop-down-content{
+    display: none;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    position: absolute;
+}
+nav > .drop-down:hover .drop-down-content{
+    display: flex;
+    flex-direction: column;
+}
+.small-menu {
+    background-color: #FFFBF0;
+    display: flex;
+    margin-left: 107px;
+}
+
+.drop-down-nav{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7474744f;
+    margin-top: 69px;
+    border-radius: 8px;
+}
+.drop-down-nav img{
+    width: 200px;
+}
+.drop-down-nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.drop-down-content-for-mobile{
+    display: none;
+    position: relative;
+    background-color: whitesmoke;
+}
+/* .drop-down-for-mobile:hover .drop-down-content-for-mobile{
+    content: 'hello';
+    display: flex;
+    flex-direction: column;
+} */
+.small-menu:hover .drop-down-nav{
+    display: flex;
+}
+.small-menu-container{
+    background-color: #FFFBF0;
+    display: none;
+}
